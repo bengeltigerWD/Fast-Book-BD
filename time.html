@@ -3,16 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Book Site</title>
-    
-</head>
-<body>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Bar</title>
     <style>
         body {
@@ -43,17 +33,33 @@
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="contact2.html">Contact</a>
-      
+       
     </div>
- <button onclick="goBack()">Go Back</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back Button Example</title>
+</head>
+<body>
+    <button onclick="goBack()">Go Back</button>
 
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
+</body>
+</html>
 
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Book Site</title>
+    
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -63,13 +69,34 @@
 </head>
 <body>
     <header>
-        <h1>Current Local Time</h1>
+        <h1>Current  Time</h1>
+<script src="script3.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Date</title>
+</head>
+<body>
+    <h1>Today's Date</h1>
+    <p id="date"></p>
+
+    <script>
+        const today = new Date();
+        const date = today.toDateString(); // Format: Weekday Month Day Year
+        document.getElementById('date').innerText = date;
+    </script>
     </header>
     <main>
         <div id="time-container">
             <p id="local-time">Loading...</p>
         </div>
     </main>
-    <script src="script3.js"></script>
-</body>
-</html>
+    
+</head>
+<body>
+</head>
+
