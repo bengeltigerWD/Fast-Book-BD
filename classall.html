@@ -4,82 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast Book BD</title>
-    <link rel="stylesheet" href="styles1.css">
-</head>
-<body>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar</title>
+    <link rel="stylesheet" href="styles1.css"> <!-- Assuming you have a separate CSS file -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif; /* Modern sans-serif font */
             margin: 0;
             padding: 0;
+            background-color: #1c1c1c; /* Dark background */
+            color: #e0e0e0; /* Light text color */
         }
         .navbar {
-            background-color: #86B380;
-            overflow: hidden;
+            background-color: #333; /* Dark grey for navbar */
+            display: flex;
+            justify-content: space-around; /* Space evenly */
+            padding: 15px 0; /* Padding for navbar */
+            border-bottom: 2px solid #666; /* Mechanical border */
+            flex-wrap: wrap; /* Responsive navbar */
         }
         .navbar a {
-            float: left;color: red;
-            display: block;
-            color: #86B80;
+            color: #ffffff; /* White text color */
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, transform 0.2s; /* Smooth hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
         }
         .navbar a:hover {
-            background-red: #ddd;
-            color: black;
+            background-color: #444; /* Darker grey on hover */
+            color: #ffcc00; /* Bright text on hover */
+            transform: scale(1.05); /* Slight scale effect on hover */
+        }
+        header {
+            text-align: center;
+            padding: 20px; /* Padding around header */
+            background-color: #620404; /* Dark red header */
+            border-bottom: 2px solid #666; /* Mechanical border */
+        }
+        header p {
+            font-size: 2.5em; /* Large welcome text */
+            line-height: 1.2; /* Line height for spacing */
+            margin: 0; /* Remove default margin */
+            color: #FFD700; /* Bright text color */
+            text-shadow: 2px 2px 4px #000000; /* Shadow for depth */
+        }
+        #search {
+            padding: 10px; /* Padding for the search input */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            width: 80%; /* Width of the search box */
+            margin-top: 20px; /* Margin above search */
+            background-color: #333; /* Dark background for input */
+            color: #ffffff; /* White text color for input */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+        }
+        .book {
+            background-color: #292929; /* Slightly lighter background for book cards */
+            border: 1px solid #666; /* Border for book cards */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Padding inside book cards */
+            margin: 10px auto; /* Centered margin */
+            width: 90%; /* Responsive width */
+            max-width: 600px; /* Max width for book cards */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            transition: transform 0.3s; /* Smooth scale effect */
+        }
+        .book:hover {
+            transform: scale(1.02); /* Scale effect on hover */
         }
     </style>
 </head>
 <body>
 
     <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="contact2.html">Contact</a>
-       
+        <a href="index.html">🏠 Home</a> <!-- Emoji for Home -->
+        <a href="contact2.html">📞 Contact</a> <!-- Emoji for Contact -->
     </div>
 
+    <header>
+        <p>WELCOME TO FAST-BOOK BD</p>
+        <input type="text" id="search" placeholder="Search for here">
+    </header>
+
+    <main>
+        <div class="book" data-title="Book Class 6">
+            <h2>Class 6 Note Book</h2>
+            <p>Author: NCTB</p>
+            <a href="class6.html">Click Here</a>
+        </div>
+        <div class="book" data-title="Book Class 7">
+            <h2>Class 7 Note Book</h2>
+            <p>Author: NCTB</p>
+            <a href="class6.html">Click Here</a>
+        </div>
+        <div class="book" data-title="Book Class 8">
+            <h2>Class 8 Note Book</h2>
+            <p>Author: NCTB</p>
+            <a href="class6.html">Click Here</a>
+        </div>
+        <div class="book" data-title="Book Class 9-10">
+            <h2>Class 9-10 Note Book</h2>
+            <p>Author: NCTB</p>
+            <a href="class6.html">Click Here</a>
+        </div>
+        <div class="book" data-title="Book Class 11-12">
+            <h2>Class 11-12 Book & Guide</h2>
+            <p>Author: Education Blog 24</p>
+            <a href="class11.html">Click Here</a>
+        </div>
+    </main>
 
 </body>
 </html>
-    <header><p style="font-size:37px; text-align:center; line-height: 30px; margin-bottom: 50px;  padding: 15px 35px 15px 35px; color: white;">WELCOME TO FAST-BOOK BD </p>
-  <input type="text" id="search" placeholder="Search for here">
-    </header>
-    <main>
-        <div class="book" data-title="Book Class 6">
-            
-            <h2>Class 6 Note Book</h2>
-            <p>Author: NCTB</p>
-<a href="class6.html">Click Here</a>
-        </div>
-        <div class="book" data-title="Book Class 7">
-            
-            <h2>Class 7 Note Book</h2>
-            <p>Author: NCTB </p>
-<a href="class6.html">Click Here</a>
-        </div>
-        <div class="book" data-title="Book Class 8">
-          
-            <h2>Class 8 Note Book</h2>
-            <p>Author: NCTB</p>
-<a href="class6.html">Click Here</a>
-        </div>
- <div class="book" data-title="Book Class 9-10">
-          
-            <h2>Class 9-10 Note Book</h2>
-            <p>Author: NCTB</p>
-<a href="class6.html">Click Here</a>
-        </div>
- <div class="book" data-title="Book Class 11-12 ">
-          
-            <h2>Class 11-12  Book & Guide</h2>
-            <p>Author: Education Blog 24</p>
-<a href="class11.html">Click Here</a>
-        </div>
