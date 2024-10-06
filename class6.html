@@ -3,28 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar</title>
+    <title>Mechanical Smart Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Using a modern font -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Modern font */
             margin: 0;
             padding: 0;
+            background-color: #1e1e1e; /* Dark background */
+            color: #e0e0e0; /* Light text for contrast */
         }
         .navbar {
-            background-color: #620404;
-            overflow: hidden;
+            background-color: #333; /* Dark gray for navbar */
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px; /* Add padding */
+            border-bottom: 2px solid #555; /* Border for a mechanical look */
         }
         .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
+            color: #e0e0e0;
             text-align: center;
-            padding: 14px 20px;
+            padding: 10px 15px;
             text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
         .navbar a:hover {
-            background-red: #ddd;
-            color: black;
+            background-color: #444; /* Slightly lighter gray on hover */
+        }
+        .service-header {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .service-header h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #ffcc00; /* Bright color for contrast */
+            text-shadow: 1px 1px 2px #000; /* Shadow for depth */
+        }
+        .service-header h2 {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #bbb; /* Gray color for subtitles */
+        }
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Space between grid items */
+            padding: 0 20px; /* Padding for grid */
+            max-width: 1200px; /* Max width for the container */
+            margin: auto; /* Center the grid */
+        }
+        .download-card {
+            background-color: #2c2c2c; /* Dark card background */
+            border: 1px solid #555; /* Border for cards */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s; /* Smooth transform on hover */
+        }
+        .download-card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        .download-link {
+            display: inline-block;
+            font-size: 18px;
+            padding: 12px 30px;
+            background-color: #ffcc00; /* Bright button color */
+            color: #1e1e1e; /* Dark text color */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .download-link:hover {
+            background-color: #ffdb4d; /* Lighter button color on hover */
+        }
+        button {
+            margin: 20px; 
+            padding: 10px 20px; 
+            background-color: #333; 
+            color: #e0e0e0; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background 0.3s; 
+        }
+        button:hover {
+            background-color: #444; /* Slightly lighter gray on hover */
         }
     </style>
 </head>
@@ -33,7 +98,7 @@
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="contact2.html">Contact</a>
-       <a href="service.html">Service</a>
+        <a href="service.html">Service</a>
     </div>
 
     <button onclick="goBack()">Go Back</button>
@@ -43,24 +108,32 @@
             window.history.back();
         }
     </script>
+
+    <div class="service-header">
+        <h1>Our Services</h1>
+    </div>
+
+    <div class="service-container">
+        <div class="download-card">
+            <h2>Class 6 Book PDF</h2>
+            <a class="download-link" href="https://nctbbook.com/class-6-book-2024/">Download Here</a>
+        </div>
+        <div class="download-card">
+            <h2>Class 7 Book PDF</h2>
+            <a class="download-link" href="https://nctbbook.com/class-7-book-2024/">Download Here</a>
+        </div>
+        <div class="download-card">
+            <h2>Class 8 Book PDF</h2>
+            <a class="download-link" href="https://nctbbook.com/class-8-book-2024/">Download Here</a>
+        </div>
+        <div class="download-card">
+            <h2>Class 9-10 Book PDF</h2>
+            <a class="download-link" href="https://nctbbook.com/class-9-book-2024/">Download Here</a>
+        </div>
+        <div class="download-card">
+            <h2>Class 11-12 Book PDF</h2>
+            <a class="download-link" href="class11.html">Download Here</a>
+        </div>
+    </div>
 </body>
 </html>
-
-
-
-<div style="text-align:center; margin-top:30px;font-size:22px;">
-
-
-
-<h1 style="font-size:50px; text-align:center;">Our Services</h1>
-<h1 style="text-align:center; margin-top:30px;font-size:22px;">Class 6 Book PDF
-<div style="text-align:center;"><a style="font-size:20px;  padding: 15px 35px 15px 35px; color: red;" href="https://nctbbook.com/class-6-book-2024/">Download Here</a></div>
-<h1 style="text-align:center; margin-top:30px;font-size:22px;">Class 7 Book PDF
-<div style="text-align:center;"><a style="font-size:20px;  padding: 15px 35px 15px 35px; color: red;" href="https://nctbbook.com/class-7-book-2024/">Download Here</a></div>
-<h1 style="text-align:center; margin-top:30px;font-size:22px;">Class 8 Book PDF
-<div style="text-align:center;"><a style="font-size:20px;  padding: 15px 35px 15px 35px; color: red;" href="https://nctbbook.com/class-8-book-2024/">Download Here</a></div>
-<h1 style="text-align:center; margin-top:30px;font-size:22px;">Class 9-10 Book PDF
-<div style="text-align:center;"><a style="font-size:20px;  padding: 15px 35px 15px 35px; color: red;" href="https://nctbbook.com/class-9-book-2024/">Download Here</a></div>
-<h1 style="text-align:center; margin-top:30px;font-size:22px;">Class 11-12 Book Pdf</h1>
-<a style="padding-right: 20px;text-align:center;"><a style="font-size:20px;  padding: 15px 35px 15px 35px; color: red;" href="class11.html">Download Here </a>
-
