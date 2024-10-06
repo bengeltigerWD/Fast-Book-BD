@@ -5,36 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Book Site</title>
     <link rel="stylesheet" href="styles1.css">
-</head>
-<body>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0; /* Light background */
         }
+        
+        /* Navbar styles */
         .navbar {
-            background-color: #86B380;
+            background-color: #4A8B45; /* Dark green background */
             overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .navbar a {
-            float: left;color: red;
+            float: left;
             display: block;
-            color: #86B80;
+            color: #f9f9f9; /* Light text color */
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            transition: background-color 0.3s;
         }
+
         .navbar a:hover {
-            background-red: #ddd;
-            color: black;
+            background-color: #86B380; /* Light green on hover */
+            color: white; /* White text on hover */
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            color: #4A8B45; /* Dark green for headings */
+            margin: 20px 0;
+        }
+
+        /* Video container styles */
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center videos */
+            margin: 20px; /* Margin around video containers */
+        }
+
+        video {
+            width: 80%; /* Full width for videos on smaller screens */
+            max-width: 800px; /* Maximum width for larger screens */
+            border: 2px solid #4A8B45; /* Dark green border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        /* Back button styles */
+        button {
+            background-color: #4A8B45; /* Green background */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto; /* Center the button */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #86B380; /* Light green on hover */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            button {
+                width: 100%; /* Full-width button on smaller screens */
+            }
         }
     </style>
 </head>
@@ -43,20 +88,33 @@
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="contact2.html">Contact</a>
-     
     </div>
-     <button onclick="goBack()">Go Back</button>
+
+    <button onclick="goBack()">Go Back</button>
+
+    <h1 style="font-size:50px;">Islamic Video</h1>
+    
+    <div class="video-container">
+        <h1 style="font-size:25px;">Dua by Mizanoor Rahman Azhari</h1>
+        <video controls>
+            <source src="dua.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="video-container">
+        <h1 style="font-size:25px;">Sad Is Not Bad by Mizanoor Rahman Azhari</h1>
+        <video controls>
+            <source src="sukduk.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
-<h1 style="font-size:50px; text-align:center;color: Red;">Islamic Video</h1>
-<h1 style="font-size:25px; ;color: black;">Dua by Mizanoor Rahman Azhari</h1>
-<div style=text-algin:center;">
-<video src="dua.MP4"></div>
 
-<h1 style="font-size:25px; ;color: black;">Sad Is Not bad by Mizanoor Rahman Azhari</h1>
-<div style=text-algin:center;">
-<video src="sukduk.mp4"></div>
+</body>
+</html>
