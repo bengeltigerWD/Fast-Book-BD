@@ -3,28 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar</title>
+    <title>E-Book Site</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Roboto font for a modern look */
+            background-color: #f0f0f0; /* Light gray background */
             margin: 0;
             padding: 0;
+            color: #333; /* Dark text color */
         }
+
+        /* Navbar styles */
         .navbar {
-            background-color: #86B380;
+            background-color: #333; /* Dark background for navbar */
             overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
         }
+
         .navbar a {
-            float: left;color: red;
+            float: left;
             display: block;
-            color: #86B80;
+            color: #f2f2f2; /* Light text color */
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            transition: background-color 0.3s; /* Smooth transition for hover */
         }
+
         .navbar a:hover {
-            background-red: #ddd;
-            color: black;
+            background-color: #86B380; /* Green background on hover */
+            color: #fff; /* White text on hover */
+        }
+
+        /* Button styles */
+        button {
+            background-color: #620404; /* Dark red button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block; /* Center the button */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #862626; /* Darker shade on hover */
+        }
+
+        /* Header styles */
+        h1 {
+            text-align: center;
+            color: #333; /* Dark color for headers */
+            margin: 20px 0; /* Margin for spacing */
+        }
+
+        /* Time and date styles */
+        #time-container {
+            text-align: center;
+            font-size: 24px; /* Larger font for time */
+            margin-top: 20px; /* Top margin for spacing */
+        }
+
+        #date {
+            font-size: 20px; /* Slightly smaller for date */
+        }
+
+        /* Main layout */
+        main {
+            max-width: 800px; /* Limit width for content */
+            margin: 0 auto; /* Center content */
+            padding: 20px; /* Padding around main content */
+            background: #fff; /* White background for content area */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            button {
+                width: 100%; /* Full-width button on smaller screens */
+            }
         }
     </style>
 </head>
@@ -33,70 +93,43 @@
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="contact2.html">Contact</a>
-       
     </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Back Button Example</title>
-</head>
-<body>
-    <button onclick="goBack()">Go Back</button>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Book Site</title>
-    
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Time</title>
-    <link rel="stylesheet" href="styles3.css">
-</head>
-<body>
-    <header>
-        <h1>Current  Time</h1>
-<script src="script3.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Today's Date</title>
-</head>
-<body>
-    <h1>Today's Date</h1>
-    <p id="date"></p>
-
-    <script>
-        const today = new Date();
-        const date = today.toDateString(); // Format: Weekday Month Day Year
-        document.getElementById('date').innerText = date;
-    </script>
-    </header>
     <main>
+        <h1>Current Time</h1>
         <div id="time-container">
             <p id="local-time">Loading...</p>
         </div>
-    </main>
-    
-</head>
-<body>
-</head>
 
+        <h1>Today's Date</h1>
+        <p id="date"></p>
+
+        <button onclick="goBack()">Go Back</button>
+    </main>
+
+    <script>
+        // Function to display the current local time
+        function updateTime() {
+            const now = new Date();
+            const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            document.getElementById('local-time').innerText = now.toLocaleTimeString([], options);
+        }
+
+        // Function to go back in history
+        function goBack() {
+            window.history.back();
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+
+        // Display today's date
+        const today = new Date();
+        const date = today.toDateString(); // Format: Weekday Month Day Year
+        document.getElementById('date').innerText = date;
+
+        // Initialize time display
+        updateTime();
+    </script>
+</body>
+</html>
