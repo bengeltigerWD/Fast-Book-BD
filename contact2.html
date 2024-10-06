@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,25 +6,82 @@
     <title>Menu Bar</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif; /* Clean sans-serif font */
             margin: 0;
             padding: 0;
+            background-color: #1c1c1c; /* Dark background */
+            color: #e0e0e0; /* Light text color */
         }
         .navbar {
-            background-color: #620404;
+            background-color: #620404; /* Dark red background */
             overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
         }
         .navbar a {
             float: left;
             display: block;
-            color: #f2f2f2;
+            color: #f2f2f2; /* Light text color */
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            transition: background 0.3s, color 0.3s; /* Smooth hover effect */
         }
         .navbar a:hover {
-            background-red: #ddd;
-            color: black;
+            background-color: #444; /* Darker grey on hover */
+            color: #FFD700; /* Gold color on hover */
+        }
+        h1 {
+            font-size: 3em; /* Large heading */
+            text-align: center;
+            margin: 20px 0; /* Margin above and below */
+            color: #FFD700; /* Gold color for contrast */
+            text-shadow: 2px 2px 4px #000000; /* Shadow for depth */
+        }
+        p {
+            font-size: 1.5em; /* Larger paragraph text */
+            text-align: center;
+            margin: 20px 0; /* Margin above and below */
+            line-height: 1.5; /* Spacing between lines */
+        }
+        a {
+            font-size: 1.5em; /* Larger link text */
+            padding: 10px 20px; /* Padding for links */
+            color: #00ccff; /* Blue color for links */
+            text-decoration: none;
+            border: 2px solid #00ccff; /* Border for links */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, color 0.3s; /* Smooth hover effect */
+        }
+        a:hover {
+            background-color: #00ccff; /* Background color on hover */
+            color: #ffffff; /* White text on hover */
+        }
+        .image-container {
+            text-align: center;
+            margin: 30px 0; /* Margin above and below */
+        }
+        .go-back-button {
+            display: block; /* Block display for centering */
+            margin: 20px auto; /* Center the button */
+            padding: 10px 20px; /* Padding for button */
+            background-color: #444; /* Button background */
+            color: #fff; /* Button text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background 0.3s; /* Smooth hover effect */
+        }
+        .go-back-button:hover {
+            background-color: #620404; /* Dark red on hover */
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Smaller heading on mobile */
+            }
+            p, a {
+                font-size: 1.2em; /* Smaller text on mobile */
+            }
         }
     </style>
 </head>
@@ -33,10 +90,29 @@
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="contact2.html">Contact</a>
-       <a href="class6.html">Service</a>
+        <a href="class6.html">Service</a>
     </div>
 
-    <button onclick="goBack()">Go Back</button>
+    <div class="image-container">
+        <img src="file:///C:/Users/admin/Downloads/fileCUsersadminDownloadsFast%2520book%2520bd.png.png" alt="Fast Book BD Logo">
+    </div>
+
+    <button class="go-back-button" onclick="goBack()">Go Back</button>
+
+    <h1>Contact Us</h1>
+    <p>Email: fastbookbd445@gmail</p>
+
+    <div class="image-container">
+        <a href="https://t.me/fastbookbd">Telegram</a>
+    </div>
+    <div class="image-container">
+        <a href="https://wa.me/message/X72W6LT6XOOUF1?src=qr">Whatsapp</a>
+    </div>
+
+    <div class="image-container">
+        <img src="file:///D:/arabic-calligraphy-.jpg" alt="Calligraphy">
+    </div>
+    <h1>আল্লাহ আপনাকে উত্তম প্রতিদান দান করুক</h1>
 
     <script>
         function goBack() {
@@ -45,19 +121,3 @@
     </script>
 </body>
 </html>
-
-
-<div style="text-align:center; margin-top:15px;"><img src="file:///C:/Users/admin/Downloads/fileCUsersadminDownloadsFast%2520book%2520bd.png.png"></div>
-<div style="text-align:center; margin-top:30px;font-size:22px;">
-
-
-
-<h1 style="font-size:50px; text-align:center;">Contact Us</h1>
-
-<p style="font-size:29px; text-align:center; line-height: 30px; margin-bottom: 50px; "<p>Email:--fastbookbd445@gmail</p>
-
-<div style="text-align:center;"><a style="font-size:34px;  padding: 15px 35px 15px 35px; color: blue;" href="https://t.me/fastbookbd">Telegram</a></div>
-<div style="text-align:center;"><a style="font-size:34px;  padding: 15px 35px 15px 35px; color: Green;" href="https://wa.me/message/X72W6LT6XOOUF1?src=qr">Whatsapp</a></div>
-
-<div style="text-align:center; margin-top:15px;"><img src="file:///D:/arabic-calligraphy-.jpg"></div>
-<h1 style="font-size:30px; text-align:center;">আল্লাহ আপনাকে উত্তম প্রতিদান দান করুক</h1>
