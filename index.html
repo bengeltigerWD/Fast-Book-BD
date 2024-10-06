@@ -7,105 +7,153 @@
     <link rel="stylesheet" href="styles1.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e1e;
+            color: #ddd;
             margin: 0;
             padding: 0;
-            color: #333;
+            overflow-x: hidden;
         }
 
+        /* Navbar Styling */
         .navbar {
-            background-color: #4CAF50;
-            overflow: hidden;
+            background-color: #2b2b2b;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
         }
 
         .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
+            color: #00FFAB;
+            text-transform: uppercase;
             text-decoration: none;
-            transition: background 0.3s;
+            padding: 10px 25px;
+            font-size: 16px; /* Adjusted for mobile */
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: color 0.4s ease;
         }
 
         .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            color: #fff;
         }
 
+        /* Header Section */
         header {
             text-align: center;
-            background-color: #86B380;
-            color: white;
-            padding: 40px 0;
+            background: linear-gradient(135deg, #393e46, #1e1e1e);
+            padding: 30px 0; /* Reduced padding for mobile */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            position: relative;
         }
 
-        header p {
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        header h1 {
             margin: 10px 0;
+            font-size: 30px; /* Adjusted for mobile */
+            color: #00FFAB;
+            text-shadow: 2px 2px 4px #000;
+            z-index: 1;
+        }
+
+        header p.version {
+            margin: 5px 0;
+            font-size: 18px; /* Adjusted for mobile */
+            color: #00FFAB;
+            z-index: 1;
+            text-shadow: 1px 1px 3px #000;
         }
 
         #search {
             padding: 10px;
-            width: 80%;
-            max-width: 500px;
-            margin: 20px 0;
-            font-size: 18px;
-            border: none;
+            width: 90%; /* Adjusted for mobile */
+            max-width: 350px; /* Adjusted for mobile */
+            margin: 20px auto;
+            font-size: 16px; /* Adjusted for mobile */
+            border: 2px solid #00FFAB;
             border-radius: 5px;
+            background-color: #2b2b2b;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+            position: relative;
         }
 
+        #search::placeholder {
+            color: #aaa;
+        }
+
+        /* Book Section */
         .book {
-            background-color: white;
+            background-color: #2e2e2e;
+            border: 2px solid #00FFAB;
             border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px; /* Reduced padding for mobile */
+            margin: 20px auto;
+            width: 80%; /* Reduced width for mobile */
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 255, 171, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
-            transition: box-shadow 0.3s;
         }
 
         .book:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 255, 171, 0.4);
         }
 
         .book h2 {
-            font-size: 24px;
+            font-size: 20px; /* Adjusted for mobile */
             margin-bottom: 10px;
-            color: #4CAF50;
+            color: #00FFAB;
         }
 
         .book p {
-            font-size: 18px;
-            color: #555;
+            font-size: 16px; /* Adjusted for mobile */
+            color: #bbb;
         }
 
         .book a {
             text-decoration: none;
-            color: #4CAF50;
+            color: #00FFAB;
             font-weight: bold;
-            border: 2px solid #4CAF50;
-            padding: 10px 20px;
+            border: 2px solid #00FFAB;
+            padding: 8px 16px; /* Adjusted for mobile */
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            margin-top: 10px; /* Adjusted for mobile */
         }
 
         .book a:hover {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #00FFAB;
+            color: #1e1e1e;
         }
 
+        /* Footer Section */
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #1a1a1a;
+            color: #00FFAB;
             text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
+            padding: 15px 0; /* Reduced padding for mobile */
+            margin-top: 20px; /* Reduced margin for mobile */
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
         }
 
         footer p {
             margin: 5px 0;
-            font-size: 18px;
+            font-size: 16px; /* Adjusted for mobile */
         }
 
         footer p.gold {
@@ -113,7 +161,43 @@
         }
 
         footer p.blue {
-            color: blue;
+            color: lightblue;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 600px) {
+            .navbar a {
+                font-size: 14px; /* Smaller font for mobile */
+            }
+
+            header h1 {
+                font-size: 28px; /* Smaller heading for mobile */
+            }
+
+            header p.version {
+                font-size: 16px; /* Smaller version text for mobile */
+            }
+
+            #search {
+                width: 90%; /* Full width for search input on mobile */
+            }
+
+            .book {
+                padding: 15px; /* Consistent padding */
+                width: 90%; /* Full width for books on mobile */
+            }
+
+            .book h2 {
+                font-size: 18px; /* Smaller book title for mobile */
+            }
+
+            .book p {
+                font-size: 14px; /* Smaller book description for mobile */
+            }
+
+            footer p {
+                font-size: 14px; /* Smaller footer text for mobile */
+            }
         }
     </style>
 </head>
@@ -127,8 +211,8 @@
 
     <!-- Header Section -->
     <header>
-        <p style="font-size:37px;">WELCOME TO FAST-BOOK BD</p>
-        <p style="font-size:20px;">VERSION: 1.4 (Last Update on 01/09/2024)</p>
+        <h1>WELCOME TO FAST-BOOK BD</h1>
+        <p class="version">VERSION: 1.4 (Last Update: 01/09/2024)</p>
         <input type="text" id="search" placeholder="Search for here">
     </header>
 
@@ -139,7 +223,7 @@
             <p>Author: NCTB</p>
             <a href="classall.html">Click Here</a>
         </div>
-       
+
         <div class="book" data-title="VIP Calculator">
             <h2>VIP Calculator</h2>
             <p>Author: Fast Book</p>
@@ -167,10 +251,10 @@
 
     <!-- Footer Section -->
     <footer>
-        <p class="gold">Site Developing: BENGAL TIGER WEB DEVELOP TEAM</p>
-        <p class="blue">Site Developer: Ajmir Ahmed</p>
-    </footer>
 
-    <script src="script1.js"></script>
-</body>
-</html>
+    <p class="gold">
+        Site Developing: <a href="https://bengeltigerwd.github.io/Bengal-Tiger-Website-Development-LTD/" target="_blank" style="color: gold; text-decoration: none;">BENGAL TIGER WEB DEVELOP TEAM</a>
+    </p>
+    <p class="blue">Site Developer: Ajmir Ahmed</p>
+</footer>
+
