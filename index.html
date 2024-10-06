@@ -4,114 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast Book BD</title>
-    <style>
-        .logo {
-            display: block; /* Centers the logo horizontally */
-            margin: 20px auto; /* Adds margin around the logo */
-            width: 100px; /* Set custom width for your logo */
-            height: 100px; /* Set custom height for your logo */
-        }
-    </style>
-</head>
-<body>
-    <!-- Replace 'your-logo.png' with the path to your actual logo file -->
-    <img src="book.png" alt="Fast book bd" class="logo">
-</body>
-</html>
-
-
-  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Book BD</title>
     <link rel="stylesheet" href="styles1.css">
-</head>
-<body>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            color: #333;
         }
+
         .navbar {
-            background-color: #86B380;
+            background-color: #4CAF50;
             overflow: hidden;
         }
+
         .navbar a {
-            float: left;color: red;
+            float: left;
             display: block;
-            color: #86B80;
+            color: white;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            transition: background 0.3s;
         }
+
         .navbar a:hover {
-            background-red: #ddd;
+            background-color: #ddd;
             color: black;
+        }
+
+        header {
+            text-align: center;
+            background-color: #86B380;
+            color: white;
+            padding: 40px 0;
+        }
+
+        header p {
+            margin: 10px 0;
+        }
+
+        #search {
+            padding: 10px;
+            width: 80%;
+            max-width: 500px;
+            margin: 20px 0;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .book {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .book:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .book h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .book p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .book a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            border: 2px solid #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .book a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        footer p.gold {
+            color: gold;
+        }
+
+        footer p.blue {
+            color: blue;
         }
     </style>
 </head>
 <body>
 
+    <!-- Navbar -->
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="contact2.html">Contact</a>
-       
     </div>
 
-
-</body>
-</html>
-    <header><p style="font-size:37px; text-align:center; line-height: 30px; margin-bottom: 50px;  padding: 15px 35px 15px 35px; color: white;">WELCOME TO FAST-BOOK BD </p>
-<p style="font-size:20px; text-align:center; line-height: 30px; margin-bottom: 50px;  padding: 15px 35px 15px 35px; color: white;"> VERSION : 1.4 (last update on 01/09/2024) </p>
+    <!-- Header Section -->
+    <header>
+        <p style="font-size:37px;">WELCOME TO FAST-BOOK BD</p>
+        <p style="font-size:20px;">VERSION: 1.4 (Last Update on 01/09/2024)</p>
         <input type="text" id="search" placeholder="Search for here">
     </header>
+
+    <!-- Main Content -->
     <main>
         <div class="book" data-title="Class 6 to Class 11 All Book PDF">
-            
             <h2>Class 6 to Class 11 All Book PDF</h2>
             <p>Author: NCTB</p>
-<a href="classall.html">Click Here</a>
+            <a href="classall.html">Click Here</a>
         </div>
        
-       <div class="book" data-title="Calculator">
-          
+        <div class="book" data-title="VIP Calculator">
             <h2>VIP Calculator</h2>
-            <p>Author:Fast Book</p>
-<a href="calculator1.html">Click Herer</a></div>
-<div class="book" data-title="Islamic Corner">
-          
+            <p>Author: Fast Book</p>
+            <a href="calculator1.html">Click Here</a>
+        </div>
+
+        <div class="book" data-title="Islamic Corner">
             <h2>Islamic Corner</h2>
-            <p>Author: Fast Book BD </p>
-<a href="islamiccorner.html">Click Here</a>
+            <p>Author: Fast Book BD</p>
+            <a href="islamiccorner.html">Click Here</a>
         </div>
-<div class="book" data-title="Local Time View">
-          
+
+        <div class="book" data-title="Local Time View">
             <h2>Local Time View</h2>
-            <p>Author: Fast Book BD </p>
-<a href="time.html">Click Here</a>
+            <p>Author: Fast Book BD</p>
+            <a href="time.html">Click Here</a>
         </div>
- <div class="book" data-title="World Map">
-          
+
+        <div class="book" data-title="World Map">
             <h2>World Map</h2>
-            <p>Author: Fast Book BD </p>
-<a href="worldmap.html">Click Here</a>
+            <p>Author: Fast Book BD</p>
+            <a href="worldmap.html">Click Here</a>
         </div>
- 
     </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="gold">Site Developing: BENGAL TIGER WEB DEVELOP TEAM</p>
+        <p class="blue">Site Developer: Ajmir Ahmed</p>
+    </footer>
+
     <script src="script1.js"></script>
 </body>
 </html>
-<p style="font-size:20px; text-align:center; line-height: 30px; margin-bottom: 50px;  padding: 15px 35px 15px 35px; color: gold;"> Site Developeing: BENGEL TIGER WEB DEVELOP TEAM </p>
-<p style="font-size:20px; text-align:center; line-height: 30px; margin-bottom: 50px;  padding: 15px 35px 15px 35px; color: blue;"> Site Developer : Ajmir Ahmed </p>
-
