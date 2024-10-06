@@ -5,36 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Book Site</title>
     <link rel="stylesheet" href="styles1.css">
-</head>
-<body>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5; /* Light background for a clean look */
+            background-image: url('https://example.com/your-islamic-background-pattern.jpg'); /* Replace with an Islamic pattern image */
+            background-size: cover; /* Cover the entire background */
         }
+
         .navbar {
-            background-color: #86B380;
+            background-color: #003d00; /* Dark green for the navbar, often associated with Islam */
             overflow: hidden;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
+
         .navbar a {
-            float: left;color: red;
+            float: left;
             display: block;
-            color: #86B80;
+            color: #fff; /* White text for contrast */
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s; /* Smooth transition */
         }
+
         .navbar a:hover {
-            background-red: #ddd;
-            color: black;
+            background-color: #005700; /* Darker shade on hover */
+            color: #fff; /* Maintain white text */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the book items */
+            padding: 20px;
+        }
+
+        .book {
+            background: #fff; /* White background for book cards */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+            text-align: center; /* Center align text */
+            width: 220px; /* Fixed width for consistency */
+            border: 2px solid #003d00; /* Green border to match Islamic theme */
+        }
+
+        .book:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        h2 {
+            color: #003d00; /* Dark green for headings */
+            font-family: 'Roboto', sans-serif; /* Modern font for headings */
+            margin: 0 0 10px; /* Margin for spacing */
+        }
+
+        p {
+            color: #666; /* Medium gray for paragraph text */
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #003d00; /* Dark green button background */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s; /* Smooth transition for button */
+        }
+
+        a:hover {
+            background-color: #005700; /* Darker button background on hover */
+        }
+
+        button {
+            background-color: #003d00; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px 0; /* Margin for spacing */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #005700; /* Darker shade on hover */
         }
     </style>
 </head>
@@ -43,40 +108,46 @@
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="contact2.html">Contact</a>
-      
     </div>
- <button onclick="goBack()">Go Back</button>
+    
+    <button onclick="goBack()">Go Back</button>
+
+    <div class="container">
+        <div class="book" data-title="Al Quran">
+            <h2>Al Quran</h2>
+            <p>Author: Fast Book BD</p>
+            <a href="quran.html">Click Here</a>
+        </div>
+
+        <div class="book" data-title="Hadis">
+            <h2>Hadis (Bangla)</h2>
+            <p>Author: Fast Book</p>
+            <a href="hadis.html">Click Here</a>
+        </div>
+
+        <div class="book" data-title="Kibla Compass">
+            <h2>Kibla Compass</h2>
+            <p>Author: Fast Book BD</p>
+            <a href="kibla.html">Click Here</a>
+        </div>
+
+        <div class="book" data-title="Islamic Photo">
+            <h2>Islamic Photo</h2>
+            <p>Author: Fast Book</p>
+            <a href="islamicphoto.html">Click Here</a>
+        </div>
+
+        <div class="book" data-title="Islamic Video">
+            <h2>Islamic Short Video</h2>
+            <p>Author: Fast Book BD</p>
+            <a href="video.html">Click Here</a>
+        </div>
+    </div>
 
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
-<div class="book" data-title="Al Quran ">
-          
-            <h2>Al Quran</h2>
-            <p>Author: Fast Book BD </p>
-<a href="quran.html">Click Here</a>
-        </div>
-       <div class="book" data-title="Hadis">
-          
-            <h2>Hadis ( bangla)</h2>
-            <p>Author:Fast Book</p>
-<a href="hadis.html">Click Herer</a></div>
-<div class="book" data-title="Kibla Compass">
-          
-            <h2>Kibla Compass</h2>
-            <p>Author: Fast Book BD </p>
-<a href="kibla.html">Click Here</a>
-        </div>
-<div class="book" data-title="islamic photo">
-          
-            <h2>Islamic Photo</h2>
-            <p>Author:Fast Book</p>
-<a href="islamicphoto.html">Click Herer</a></div>
-<div class="book" data-title="islamic video">
-          
-            <h2>Islamic Short video</h2>
-            <p>Author: Fast Book BD </p>
-<a href="video.html">Click Here</a>
-        </div>
+</body>
+</html>
