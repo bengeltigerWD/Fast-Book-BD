@@ -29,7 +29,7 @@
             text-transform: uppercase;
             text-decoration: none;
             padding: 10px 25px;
-            font-size: 16px; /* Adjusted for mobile */
+            font-size: 16px;
             font-weight: bold;
             letter-spacing: 1px;
             transition: color 0.4s ease;
@@ -43,7 +43,7 @@
         header {
             text-align: center;
             background: linear-gradient(135deg, #393e46, #1e1e1e);
-            padding: 30px 0; /* Reduced padding for mobile */
+            padding: 30px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
             position: relative;
         }
@@ -61,7 +61,7 @@
 
         header h1 {
             margin: 10px 0;
-            font-size: 30px; /* Adjusted for mobile */
+            font-size: 30px;
             color: #00FFAB;
             text-shadow: 2px 2px 4px #000;
             z-index: 1;
@@ -69,29 +69,48 @@
 
         header p.version {
             margin: 5px 0;
-            font-size: 18px; /* Adjusted for mobile */
+            font-size: 18px;
             color: #00FFAB;
             z-index: 1;
             text-shadow: 1px 1px 3px #000;
         }
 
+        #search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
         #search {
             padding: 10px;
-            width: 90%; /* Adjusted for mobile */
-            max-width: 350px; /* Adjusted for mobile */
-            margin: 20px auto;
-            font-size: 16px; /* Adjusted for mobile */
+            width: 80%;
+            max-width: 350px;
+            margin-right: 10px;
+            font-size: 16px;
             border: 2px solid #00FFAB;
             border-radius: 5px;
             background-color: #2b2b2b;
             color: #fff;
             text-align: center;
-            z-index: 1;
-            position: relative;
         }
 
         #search::placeholder {
             color: #aaa;
+        }
+
+        #search-button {
+            padding: 10px 20px;
+            background-color: #00FFAB;
+            color: #1e1e1e;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #search-button:hover {
+            background-color: #00cc8d;
         }
 
         /* Book Section */
@@ -99,9 +118,9 @@
             background-color: #2e2e2e;
             border: 2px solid #00FFAB;
             border-radius: 10px;
-            padding: 15px; /* Reduced padding for mobile */
+            padding: 15px;
             margin: 20px auto;
-            width: 80%; /* Reduced width for mobile */
+            width: 80%;
             max-width: 400px;
             box-shadow: 0 5px 15px rgba(0, 255, 171, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -114,13 +133,13 @@
         }
 
         .book h2 {
-            font-size: 20px; /* Adjusted for mobile */
+            font-size: 20px;
             margin-bottom: 10px;
             color: #00FFAB;
         }
 
         .book p {
-            font-size: 16px; /* Adjusted for mobile */
+            font-size: 16px;
             color: #bbb;
         }
 
@@ -129,11 +148,11 @@
             color: #00FFAB;
             font-weight: bold;
             border: 2px solid #00FFAB;
-            padding: 8px 16px; /* Adjusted for mobile */
+            padding: 8px 16px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
             display: inline-block;
-            margin-top: 10px; /* Adjusted for mobile */
+            margin-top: 10px;
         }
 
         .book a:hover {
@@ -146,14 +165,14 @@
             background-color: #1a1a1a;
             color: #00FFAB;
             text-align: center;
-            padding: 15px 0; /* Reduced padding for mobile */
-            margin-top: 20px; /* Reduced margin for mobile */
+            padding: 15px 0;
+            margin-top: 20px;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
         }
 
         footer p {
             margin: 5px 0;
-            font-size: 16px; /* Adjusted for mobile */
+            font-size: 16px;
         }
 
         footer p.gold {
@@ -167,104 +186,58 @@
         /* Responsive Media Queries */
         @media (max-width: 600px) {
             .navbar a {
-                font-size: 14px; /* Smaller font for mobile */
+                font-size: 14px;
             }
 
             header h1 {
-                font-size: 28px; /* Smaller heading for mobile */
-            }
-
-            header p.version {
-                font-size: 16px; /* Smaller version text for mobile */
-            }
-
-            #search {
-                width: 90%; /* Full width for search input on mobile */
-            }
-
-            .book {
-                padding: 15px; /* Consistent padding */
-                width: 90%; /* Full width for books on mobile */
-            }
-
-            .book h2 {
-                font-size: 18px; /* Smaller book title for mobile */
-            }
-
-            .book p {
-                font-size: 14px; /* Smaller book description for mobile */
-            }
-
-            footer p {
-                font-size: 14px; /* Smaller footer text for mobile */
-            }
-        
-        
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            background: #020024;
-        }
-
-        .bengal-tiger {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .bengal-tiger a {
-            text-decoration: none;
-        }
-
-        .be {
-            color: green;
-        }
-
-        .ng {
-            color: red;
-        }
-
-        .al {
-            color: green;
-        }
-
-        .tiger {
-            color: yellow;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        footer img {
-            margin-top: 10px;
-            max-width: 100px;
-        }
-
-        @media only screen and (max-width: 600px) {
-            header p {
                 font-size: 28px;
             }
 
-            .book {
-                width: 95%;
-                margin: 10px;
+            header p.version {
+                font-size: 16px;
             }
 
-            .navbar a {
-                padding: 10px;
-                font-size: 14px;
+            #search-container {
+                flex-direction: column;
             }
 
-            header input[type="text"] {
+            #search {
                 width: 90%;
-                font-size: 14px;
             }
 
-            .bengal-tiger {
+            .book {
+                padding: 15px;
+                width: 90%;
+            }
+
+            .book h2 {
                 font-size: 18px;
             }
+
+            .book p {
+                font-size: 14px;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+            /* Bengal Tiger Web Development Color Scheme */
+.be {
+    color: green; /* Be - green */
+}
+
+.ng {
+    color: red; /* ng - red */
+}
+
+.al {
+    color: green; /* al - green */
+}
+
+.tiger {
+    color: yellow; /* tiger - yellow */
+}
+
         }
     </style>
 </head>
@@ -280,11 +253,17 @@
     <header>
         <h1>WELCOME TO FAST-BOOK BD</h1>
         <p class="version">VERSION: 1.5 (Last Update: 06/10/2024)</p>
-        <input type="text" id="search" placeholder="Search for here">
+
+        <!-- Search Container with Button -->
+        <div id="search-container">
+            <input type="text" id="search" placeholder="Search for here">
+            <button id="search-button">Search</button>
+        </div>
     </header>
 
     <!-- Main Content -->
     <main>
+        <!-- Book Sections -->
         <div class="book" data-title="Class 6 to Class 11 All Book PDF">
             <h2>Class 6 to Class 11 All Book PDF</h2>
             <p>Author: NCTB</p>
@@ -315,16 +294,15 @@
             <a href="worldmap.html">Click Here</a>
         </div>
     </main>
+<footer>
+    <p class="bengal-tiger">
+        <a href="https://bengeltigerwd.github.io/Bengal-Tiger-Website-Development-LTD/">
+            <span class="be">Be</span><span class="ng">ng</span><span class="al">al</span>
+            <span class="tiger">Tiger</span> Web Development
+        </a>
+    </p>
+    <p>Site Developer: Ajmir Ahmed</p>
+</footer>
 
-    <!-- Footer Section -->
-   <footer>
-        <p class="bengal-tiger">
-            <a href="https://bengeltigerwd.github.io/Bengal-Tiger-Website-Development-LTD/">
-                <span class="be">Be</span><span class="ng">ng</span><span class="al">al</span>
-                <span class="tiger">Tiger</span> Web Development
-            </a>
-        </p>
-        <p>Site Developer: Ajmir Ahmed</p>
-        <img src="https://t.bkit.co/w_66d74a93ce0d9.gif" alt="Logo">
-    </footer>
-
+</body>
+</html>
