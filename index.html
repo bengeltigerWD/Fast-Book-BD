@@ -199,6 +199,9 @@
         .tiger {
             color: yellow; /* tiger - yellow */
         }
+         .Web Development {
+            color: red; /* tiger - yellow */
+        }
 
         /* Responsive Media Queries */
         @media (max-width: 600px) {
@@ -295,16 +298,34 @@
         </div>
     </main>
 
-    <!-- Footer Section -->
+  <!-- Footer Section -->
     <footer>
         <p class="bengal-tiger">
             <a href="https://bengeltigerwd.github.io/Bengal-Tiger-Website-Development-LTD/">
                 <span class="be">Be</span><span class="ng">ng</span><span class="al">al</span>
-                <span class="tiger">Tiger</span> Web Development
+                <span class="tiger">Tiger</span><span class="be">Web Development</span> 
             </a>
         </p>
         <p>Site Developer: Ajmir Ahmed</p>
     </footer>
 
+    <script>
+        // JavaScript for the search functionality
+        document.getElementById("search-button").addEventListener("click", function () {
+            const query = document.getElementById("search").value.toLowerCase();
+            const books = document.querySelectorAll(".book");
+            
+            books.forEach(book => {
+                const title = book.querySelector("h2").innerText.toLowerCase();
+                const author = book.querySelector("p").innerText.toLowerCase();
+                
+                if (title.includes(query) || author.includes(query)) {
+                    book.style.display = "block"; // Show matching books
+                } else {
+                    book.style.display = "none"; // Hide non-matching books
+                }
+            });
+        });
+    </script>
 </body>
 </html>
