@@ -1,112 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qibla Direction Compass</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>কাব্বা কম্পাস</title>
     <style>
         body {
+            background-color: #e0f7fa;
             font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            background-color: #f9f9f9; /* Light background for a clean look */
-            color: #003d00; /* Dark green text color */
+            overflow: hidden;
+            flex-direction: column;
         }
-
-        header {
-            background-color: #003d00; /* Dark green header */
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        #compass {
+        
+        .compass-container {
             position: relative;
-            margin: 50px auto;
-            width: 300px; /* Set width for the compass */
-            height: 300px; /* Set height for the compass */
-            border: 10px solid #86B380; /* Light green border */
-            border-radius: 50%; /* Circular compass */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-            background-image: url('https://example.com/your-islamic-pattern.jpg'); /* Optional Islamic background pattern */
-            background-size: cover; /* Cover the entire background */
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+            border: 8px solid #00bcd4;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.5s ease;
         }
 
-        #compass img {
+        .compass-container::before {
+            content: '';
+            position: absolute;
             width: 100%;
             height: 100%;
-            border-radius: 50%; /* Circular image */
+            border-radius: 50%;
+            border: 4px solid rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
-        #pointer {
+        .needle {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 4px; /* Pointer width */
-            height: 100px; /* Pointer height */
-            background-color: red; /* Pointer color */
-            transform-origin: bottom; /* Rotate from the bottom */
-            transform: translate(-50%, -100%); /* Center the pointer */
-            transition: transform 0.5s ease; /* Smooth rotation */
+            width: 8px;
+            height: 120px;
+            background-color: #ff5252;
+            border-radius: 10px;
+            top: 15%;
+            transform-origin: bottom;
+            transition: transform 0.5s ease-in-out;
         }
 
-        #instruction {
-            text-align: center;
-            font-size: 18px;
+        .needle::after {
+            content: '↑';
+            position: absolute;
+            bottom: -20px;
+            left: -12px;
+            font-size: 22px;
+            color: #ff5252;
+        }
+
+        .compass-label {
+            position: absolute;
+            color: #00796b;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .compass-label.top {
+            top: 10%;
+        }
+
+        .compass-label.bottom {
+            bottom: 10%;
+        }
+
+        .compass-label.left {
+            left: 10%;
+        }
+
+        .compass-label.right {
+            right: 10%;
+        }
+
+        .compass-center {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #00796b;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Buttons styling */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
             margin-top: 20px;
-            padding: 0 20px;
+            gap: 20px;
         }
 
-        button {
-            background-color: #003d00; /* Dark green button */
+        .btn {
+            background-color: #00bcd4;
             color: white;
-            border: none;
             padding: 10px 20px;
+            border: none;
             border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
-            margin: 20px auto;
-            display: block; /* Center the button */
-            transition: background-color 0.3s; /* Smooth transition */
+            transition: background-color 0.3s;
         }
 
-        button:hover {
-            background-color: #005700; /* Darker shade on hover */
+        .btn:hover {
+            background-color: #00796b;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Qibla Direction</h1>
-    </header>
-
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="contact2.html">Contact</a>
+    <div class="compass-container">
+        <div class="needle" id="needle"></div>
+        <div class="compass-center"></div>
+        <div class="compass-label top">উত্তর</div>
+        <div class="compass-label bottom">দক্ষিণ</div>
+        <div class="compass-label left">পশ্চিম</div>
+        <div class="compass-label right">পূর্ব</div>
     </div>
 
-    <button onclick="goBack()">Go Back</button>
-
-    <main>
-        <div id="compass">
-            <img src="compass.webp" alt="Compass" id="compass-img">
-            <div id="pointer"></div>
-        </div>
-        <p id="instruction">Rotate your device to find the Qibla direction</p>
-    </main>
+    <div class="buttons-container">
+        <button class="btn" onclick="window.location.href='index.html'">Home</button>
+        <button class="btn" onclick="window.location.href='contact2.html'">Contact</button>
+        <button class="btn" onclick="window.history.back()">Back</button>
+    </div>
 
     <script>
-        function goBack() {
-            window.history.back();
-        }
+        // কাব্বার কোঅর্ডিনেট (এটি সরলীকৃত। প্রকৃত কোঅর্ডিনেট ব্যবহার করা উচিত।)
+        const kaabaLat = 21.4225;  // কাব্বার latitude
+        const kaabaLon = 39.8262;  // কাব্বার longitude
 
-        // Function to get the device orientation
-        window.addEventListener("deviceorientation", function(event) {
-            const alpha = event.alpha; // Orientation angle in degrees
-            const pointer = document.getElementById('pointer');
-            pointer.style.transform = `translate(-50%, -100%) rotate(${-alpha}deg)`;
+        // বর্তমান ডিভাইসের অবস্থান পাওয়া
+        navigator.geolocation.getCurrentPosition((position) => {
+            const userLat = position.coords.latitude;
+            const userLon = position.coords.longitude;
+
+            // ডিভাইসের অবস্থান থেকে কাব্বার দিকে দিক নির্ধারণ
+            const angle = getAngle(userLat, userLon, kaabaLat, kaabaLon);
+
+            // কম্পাসের সূচককে কাব্বার দিকে ঘোরানো
+            const needle = document.getElementById('needle');
+            needle.style.transform = `rotate(${angle}deg)`;
         });
+
+        // দুইটি স্থান (latitude, longitude) এর মধ্যে কোণ বের করার ফাংশন
+        function getAngle(lat1, lon1, lat2, lon2) {
+            const deltaLon = lon2 - lon1;
+            const y = Math.sin(deltaLon) * Math.cos(lat2);
+            const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(deltaLon);
+            const angle = Math.atan2(y, x) * 180 / Math.PI;
+            return angle;
+        }
     </script>
 </body>
 </html>
